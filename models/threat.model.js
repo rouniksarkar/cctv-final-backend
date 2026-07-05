@@ -38,6 +38,16 @@ const alertSchema = new mongoose.Schema(
       type: String,
       default: null,
     },
+
+    imagekitFileId: {
+      type: String,
+      default: null,
+    },
+
+    imagekitFilePath: {
+      type: String,
+      default: null,
+    },
   },
   {
     timestamps: true,

@@ -5,10 +5,11 @@ const {
   getCameraAlerts,
   getAlertById,
 } = require("../controllers/threat.controller.js");
+const uploadAlertImage = require("../middleware/image-upload.middleware.js");
 
 const router = express.Router();
 
-router.post("/alerts", createAlert);
+router.post("/alerts", uploadAlertImage.single("image"), createAlert);
 
 router.get("/alerts", getCameraAlerts);
 
